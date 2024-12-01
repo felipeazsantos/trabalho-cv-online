@@ -1,0 +1,113 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr auto;
+    grid-template-areas: 
+        "header"
+        "content"
+        "footer";
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Roboto, sans-serif;
+}
+
+header {
+    grid-area: header;
+}
+
+.header__main-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    column-gap: 4px;
+}
+
+.header__main-menu li {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.header__main-menu li:hover {
+    background-color: #595858;
+}
+
+.header__main-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+main {
+    grid-area: content;
+    padding: 20px;
+    margin: 0 20vw 5vh 20vw;
+    line-height: 1.8em;
+}
+
+.form-contact{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-contact input {
+    height: 32px;
+    padding: 4px 10px;
+    flex-grow: 1;
+    margin-bottom: 8px;
+}
+
+.form-contact input.invalid, .form-contact textarea.invalid {
+    border-color: red;
+}
+
+.form-field-error {
+    color: red;
+    font-size: 0.9em;
+}
+
+.form-contact button {
+    margin: 16px 0;
+    border: none;
+    border-radius: 4px;
+    height: 48px;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Open Sans';
+    width: 10vw;
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+.message-sent {
+    color: white;
+    background-color: green;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid darkgreen;
+    border-radius: 4px;
+    display: none;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0;
+}
+
+.border-division {
+    margin: 24px 0 36px 0;
+    background-color: #333;
+    height: 0.02rem;
+}
